@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Collections - Chhap</title>
+    <link rel="icon" href="./assets/images/logo.png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body id="page-body">
+
+    <!-- Header Section (Unchanged) -->
+    <header class="header" id="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="#"><img src="https://chhap.in/img/logo.png" alt="Chhap Logo"></a>
+            </div>
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input class="search-bar" type="text" placeholder="Search for Products, Brands and More...">
+            </div>
+
+            <div class="header-right">
+                <nav class="main-nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="explore.html" class="nav-link active">Explore</a>
+                    <a href="creator.html" class="nav-link">Creator</a>
+                    <a href="design.html" class="nav-link">Design</a>
+                </nav>
+                <div class="header-icons">
+                    <div class="icon-container">
+                        <a href="#" class="icon-link" id="cart-icon"><i class="fas fa-shopping-bag"></i></a>
+                    </div>
+                    <div class="icon-container">
+                        <a href="#" class="icon-link dropdown-toggle"><i class="fas fa-bell"></i></a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-header">Notifications</div>
+                            <ul class="notification-list">
+                                <li class="notification-item">
+                                    <i class="fas fa-box notification-icon"></i>
+                                    <div class="notification-text">
+                                        Your order #1234 has been shipped!
+                                        <span class="time">15 minutes ago</span>
+                                    </div>
+                                </li>
+                                <li class="notification-item">
+                                    <i class="fas fa-percent notification-icon"></i>
+                                    <div class="notification-text">
+                                        A new promo code is available: SUMMER25
+                                        <span class="time">1 hour ago</span>
+                                    </div>
+                                </li>
+                                <li class="notification-item">
+                                    <i class="fas fa-heart notification-icon"></i>
+                                    <div class="notification-text">
+                                        The "Urban Explorer" hoodie is back in stock.
+                                        <span class="time">4 hours ago</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <span class="notification-badge">3</span>
+                    </div>
+                    <!-- USER PROFILE ICON -->
+                    <div class="icon-container">
+                        <a href="#" class="icon-link dropdown-toggle"><i class="fas fa-user"></i></a>
+                        <div class="dropdown-menu profile-dropdown">
+                            <div class="profile-header">
+                                <img src="https://i.pravatar.cc/100" alt="User Avatar" class="avatar">
+                                <div class="user-info">
+                                    <h4>Alex Smith</h4>
+                                    <p>alex.smith@example.com</p>
+                                </div>
+                            </div>
+                            <a href="#" class="dropdown-link"><i class="fas fa-user-circle"></i> My Profile</a>
+                            <a href="#" class="dropdown-link"><i class="fas fa-box-archive"></i> My Orders</a>
+                            <a href="#" class="dropdown-link"><i class="fas fa-cog"></i> Settings</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-link"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="hamburger-menu" id="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div class="mobile-nav" id="mobile-nav">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="explore.html" class="nav-link">Explore</a>
+            <a href="creator.html" class="nav-link">Creator</a>
+            <a href="design.html" class="nav-link">Design</a>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <!-- Page Title Section -->
+        <section class="s-page-title">
+            <div class="container">
+                <div class="content">
+                    <h1 class="title-page">Explore </h1>
+                    <ul class="breadcrumbs-page">
+                        <li><a href="index.html" class="h6 link">Home</a></li>
+                        <li class="breadcrumb-arrow"><i class="fas fa-chevron-right"></i></li>
+                        <li>
+                            <h6 class="current-page fw-normal">Explore</h6>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="explore-section">
+            <div class="container">
+                <div class="explore-layout">
+                    <!-- Filter Sidebar -->
+                    <!-- Filter Sidebar -->
+                    <aside class="explore-sidebar" id="explore-sidebar">
+                        <div class="filter-group">
+                            <h3>Categories</h3>
+                            <ul class="filter-list" data-filter-group="category">
+                                <li><a href="#" class="active" data-filter="all">All</a></li>
+                                <li><a href="#" data-filter="dresses">Dresses</a></li>
+                                <li><a href="#" data-filter="t-shirts">T-Shirts</a></li>
+                            </ul>
+                        </div>
+                        <div class="filter-group">
+                            <h3>Price Range</h3>
+                            <input type="range" class="price-range-slider" id="price-slider" min="10" max="100"
+                                value="100">
+                            <div class="price-range-values">
+                                <span>$10</span>
+                                <span id="price-value">$100</span>
+                            </div>
+                        </div>
+                        <div class="filter-group">
+                            <h3>Colors</h3>
+                            <div class="color-filter-list" data-filter-group="color">
+                                <span class="color-swatch-filter active" data-filter="all"></span>
+                                <span class="color-swatch-filter" data-filter="beige"
+                                    style="background-color: #d3bca9;"></span>
+                                <span class="color-swatch-filter" data-filter="blue"
+                                    style="background-color: #a8c1d7;"></span>
+                            </div>
+                        </div>
+                        <div class="filter-group">
+                            <h3>Sizes</h3>
+                            <div class="size-filter-list" data-filter-group="size">
+                                <button class="size-btn-filter active" data-filter="all">All</button>
+                                <button class="size-btn-filter" data-filter="s">S</button>
+                                <button class="size-btn-filter" data-filter="m">M</button>
+                            </div>
+                        </div>
+                        <button class="btn-clear-filters" id="clear-filters-btn">Clear Filters</button>
+                    </aside>
+
+                    <!-- Products Grid -->
+                    <div class="explore-products">
+                        <div class="results-header">
+                            <div class="results-count" id="results-count"></div>
+                            <div class="flextdr">
+                                <div class="sort-by">
+                                    <select id="sort-select">
+                                        <option value="newest">Sort by newest</option>
+                                        <option value="price-desc">Price: High to Low</option>
+                                        <option value="price-asc">Price: Low to High</option>
+                                    </select>
+                                </div>
+                                <div class="view-toggle">
+                                    <button id="grid-view-btn" class="active" aria-label="Grid View">
+                                        <i class="fas fa-th-large"></i>
+                                    </button>
+                                    <button id="list-view-btn" aria-label="List View">
+                                        <i class="fas fa-list"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-grid" id="product-grid">
+                            <!-- Product Card 1 -->
+                            <div class="product-card">
+                                <div class="product-image-wrapper">
+                                    <a href="crew-neck-plane.html" target="_blank">
+                                        <div class="product-image-flipper">
+                                            <img src="./assets/images/t-shirts/fornt-1.jpeg"
+                                                alt="Front of Summer Two Piece Set" class="product-image front-image">
+                                            <img src="./assets/images/t-shirts/back-1.jpeg"
+                                                alt="Back of Summer Two Piece Set" class="product-image back-image">
+                                        </div>
+                                    </a>
+                                    <div class="product-badge badge-hot">Hot</div>
+                                    <!-- Hover UI -->
+                                    <div class="product-actions">
+                                        <button class="action-btn" aria-label="Add to cart"><i
+                                                class="fas fa-shopping-cart"></i></button>
+                                        <button class="action-btn" aria-label="Add to wishlist"><i
+                                                class="fas fa-heart"></i></button>
+                                        <button class="action-btn" aria-label="Compare"><i
+                                                class="fas fa-exchange-alt"></i></button>
+                                        <button class="action-btn" aria-label="Quick view"><i
+                                                class="fas fa-eye"></i></button>
+                                    </div>
+                                    <div class="product-sizes">
+                                        <button class="size-option">XS</button>
+                                        <button class="size-option active">S</button>
+                                        <button class="size-option">M</button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <a href="crew-neck-plane.html" target="_blank">
+                                        <h3 class="product-title">Crew neck plain</h3>
+                                    </a>
+                                    <p class="product-price"><span class="original-price">$99.99</span> $69.99</p>
+                                    <div class="product-color-swatches">
+                                        <span class="color-swatch active" style="background-color: #d3bca9;"></span>
+                                        <span class="color-swatch" style="background-color: #a8c1d7;"></span>
+                                        <span class="color-swatch" style="background-color: #e8955f;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image-wrapper">
+                                    <a href="v-neck.html" target="_blank">
+                                        <div class="product-image-flipper">
+                                            <img src="./assets/images/t-shirts/front-2.jpeg" alt="Front of Nike Shirt"
+                                                class="product-image front-image">
+                                            <img src="./assets/images/t-shirts/back-2.jpeg" alt="Back of Nike Shirt"
+                                                class="product-image back-image">
+                                        </div>
+                                    </a>
+                                    <div class="product-badge badge-sale"><i class="fas fa-bolt"></i> FLASH SALE</div>
+                                    <!-- Hover UI -->
+                                    <div class="product-actions">
+                                        <button class="action-btn" aria-label="Add to cart"><i
+                                                class="fas fa-shopping-cart"></i></button>
+                                        <button class="action-btn" aria-label="Add to wishlist"><i
+                                                class="fas fa-heart"></i></button>
+                                        <button class="action-btn" aria-label="Compare"><i
+                                                class="fas fa-exchange-alt"></i></button>
+                                        <button class="action-btn" aria-label="Quick view"><i
+                                                class="fas fa-eye"></i></button>
+                                    </div>
+                                    <div class="product-sizes">
+                                        <button class="size-option">XS</button>
+                                        <button class="size-option active">S</button>
+                                        <button class="size-option">M</button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <a href="v-neck.html" target="_blank">
+                                        <h3 class="product-title">V‑neck</h3>
+                                    </a>
+                                    <p class="product-price"><span class="original-price">$99.99</span> $69.99</p>
+                                    <div class="product-color-swatches">
+                                        <span class="color-swatch" style="background-color: #f3d4e0;"></span>
+                                        <span class="color-swatch active" style="background-color: #e5e0cb;"></span>
+                                        <span class="color-swatch" style="background-color: #b5c3a5;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image-wrapper">
+                                    <a href="polo-tee.html" target="_blank">
+                                        <div class="product-image-flipper">
+                                            <img src="./assets/images/t-shirts/front-3.jpeg"
+                                                alt="Front of Women's Pants" class="product-image front-image">
+                                            <img src="./assets/images/t-shirts/back-3.jpeg" alt="Back of Women's Pants"
+                                                class="product-image back-image">
+                                        </div>
+                                    </a>
+                                    <div class="product-badge badge-trending">Trending</div>
+                                    <!-- Hover UI -->
+                                    <div class="product-actions">
+                                        <button class="action-btn" aria-label="Add to cart"><i
+                                                class="fas fa-shopping-cart"></i></button>
+                                        <button class="action-btn" aria-label="Add to wishlist"><i
+                                                class="fas fa-heart"></i></button>
+                                        <button class="action-btn" aria-label="Compare"><i
+                                                class="fas fa-exchange-alt"></i></button>
+                                        <button class="action-btn" aria-label="Quick view"><i
+                                                class="fas fa-eye"></i></button>
+                                    </div>
+                                    <div class="product-sizes">
+                                        <button class="size-option">XS</button>
+                                        <button class="size-option active">S</button>
+                                        <button class="size-option">M</button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <a href="polo-tee.html" target="_blank">
+                                        <h3 class="product-title">Polo (collared tee)</h3>
+                                    </a>
+                                    <p class="product-price"><span class="original-price">$99.99</span> $19.99</p>
+                                    <div class="product-color-swatches">
+                                        <span class="color-swatch" style="background-color: #f3d4e0;"></span>
+                                        <span class="color-swatch active" style="background-color: #e5e0cb;"></span>
+                                        <span class="color-swatch" style="background-color: #b5c3a5;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image-wrapper">
+                                    <a href="v-neck-button-vest.html" target="_blank">
+                                        <div class="product-image-flipper">
+                                            <img src="./assets/images/t-shirts/front-4.jpeg" alt="Front of V-neck Vest"
+                                                class="product-image front-image">
+                                            <img src="./assets/images/t-shirts/back-4.jpeg" alt="Back of V-neck Vest"
+                                                class="product-image back-image">
+                                        </div>
+                                    </a>
+                                    <div class="product-badge badge-new">New</div>
+                                    <!-- Hover UI -->
+                                    <div class="product-actions">
+                                        <button class="action-btn" aria-label="Add to cart"><i
+                                                class="fas fa-shopping-cart"></i></button>
+                                        <button class="action-btn" aria-label="Add to wishlist"><i
+                                                class="fas fa-heart"></i></button>
+                                        <button class="action-btn" aria-label="Compare"><i
+                                                class="fas fa-exchange-alt"></i></button>
+                                        <button class="action-btn" aria-label="Quick view"><i
+                                                class="fas fa-eye"></i></button>
+                                    </div>
+                                    <div class="product-sizes">
+                                        <button class="size-option">XS</button>
+                                        <button class="size-option active">S</button>
+                                        <button class="size-option">M</button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <a href="v-neck-button-vest.html" target="_blank">
+                                        <h3 class="product-title">V-neck button down vest</h3>
+                                    </a>
+                                    <p class="product-price"><span class="original-price">$99.99</span> $69.99</p>
+                                    <div class="product-color-swatches">
+                                        <span class="color-swatch active" style="background-color: #d3bca9;"></span>
+                                        <span class="color-swatch" style="background-color: #555555;"></span>
+                                        <span class="color-swatch" style="background-color: #8da47b;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image-wrapper">
+                                    <a href="graphic-printed-tee.html" target="_blank">
+                                        <div class="product-image-flipper">
+                                            <img src="./assets/images/t-shirts/front-5.jpeg"
+                                                alt="Front of Oversized Tee" class="product-image front-image">
+                                            <img src="./assets/images/t-shirts/back-5.jpeg" alt="Back of Oversized Tee"
+                                                class="product-image back-image">
+                                        </div>
+                                    </a>
+                                    <div class="product-badge badge-sale"> Flash sale</div>
+                                    <div class="product-actions">
+                                        <button class="action-btn" aria-label="Add to cart"><i
+                                                class="fas fa-shopping-cart"></i></button>
+                                        <button class="action-btn" aria-label="Add to wishlist"><i
+                                                class="fas fa-heart"></i></button>
+                                        <button class="action-btn" aria-label="Compare"><i
+                                                class="fas fa-exchange-alt"></i></button>
+                                        <button class="action-btn" aria-label="Quick view"><i
+                                                class="fas fa-eye"></i></button>
+                                    </div>
+                                    <div class="product-sizes">
+                                        <button class="size-option">S</button>
+                                        <button class="size-option active">M</button>
+                                        <button class="size-option">L</button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <a href="graphic-printed-tee.html" target="_blank">
+                                        <h3 class="product-title">Graphic / printed tees</h3>
+                                    </a>
+                                    <p class="product-price"><span class="original-price">$79.99</span> $49.99</p>
+                                    <div class="product-color-swatches">
+                                        <span class="color-swatch active" style="background-color: #333;"></span>
+                                        <span class="color-swatch" style="background-color: #9db4c0;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image-wrapper">
+                                    <a href="polo-tee.html" target="_blank">
+                                        <div class="product-image-flipper">
+                                            <img src="./assets/images/t-shirts/front-6.jpeg"
+                                                alt="Front of Fleece Hoodie" class="product-image front-image">
+                                            <img src="./assets/images/t-shirts/back-6.jpeg" alt="Back of Fleece Hoodie"
+                                                class="product-image back-image">
+                                        </div>
+                                    </a>
+                                    <div class="product-badge badge-trending">20% OFF</div>
+                                    <div class="product-actions">
+                                        <button class="action-btn" aria-label="Add to cart"><i
+                                                class="fas fa-shopping-cart"></i></button>
+                                        <button class="action-btn" aria-label="Add to wishlist"><i
+                                                class="fas fa-heart"></i></button>
+                                        <button class="action-btn" aria-label="Compare"><i
+                                                class="fas fa-exchange-alt"></i></button>
+                                        <button class="action-btn" aria-label="Quick view"><i
+                                                class="fas fa-eye"></i></button>
+                                    </div>
+                                    <div class="product-sizes">
+                                        <button class="size-option">S</button>
+                                        <button class="size-option active">M</button>
+                                        <button class="size-option">L</button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <a href="polo-tee.html" target="_blank">
+                                        <h3 class="product-title">Striped & colour‑blocked</h3>
+                                    </a>
+                                    <p class="product-price"><span class="original-price">$109.99</span> $79.99</p>
+                                    <div class="product-color-swatches">
+                                        <span class="color-swatch" style="background-color: #dcdcdc;"></span>
+                                        <span class="color-swatch active" style="background-color: #e77e6c;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image-wrapper">
+                                    <a href="polo-tee.html" target="_blank">
+                                        <div class="product-image-flipper">
+                                            <img src="./assets/images/t-shirts/front-7.jpeg" alt="Front of Zip Jacket"
+                                                class="product-image front-image">
+                                            <img src="./assets/images/t-shirts/back-7.jpeg" alt="Back of Zip Jacket"
+                                                class="product-image back-image">
+                                        </div>
+                                    </a>
+                                    <!-- <div class="product-badge badge-hot"></div> -->
+                                    <div class="product-actions">
+                                        <button class="action-btn" aria-label="Add to cart"><i
+                                                class="fas fa-shopping-cart"></i></button>
+                                        <button class="action-btn" aria-label="Add to wishlist"><i
+                                                class="fas fa-heart"></i></button>
+                                        <button class="action-btn" aria-label="Compare"><i
+                                                class="fas fa-exchange-alt"></i></button>
+                                        <button class="action-btn" aria-label="Quick view"><i
+                                                class="fas fa-eye"></i></button>
+                                    </div>
+                                    <div class="product-sizes">
+                                        <button class="size-option">M</button>
+                                        <button class="size-option active">L</button>
+                                        <button class="size-option">XL</button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <a href="polo-tee.html" target="_blank">
+                                        <h3 class="product-title">Casual Zip Jacket</h3>
+                                    </a>
+                                    <p class="product-price"><span class="original-price">$119.99</span> $89.99</p>
+                                    <div class="product-color-swatches">
+                                        <span class="color-swatch active" style="background-color: #3c3c3c;"></span>
+                                        <span class="color-swatch" style="background-color: #b0b0b0;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image-wrapper">
+                                    <a href="polo-tee.html" target="_blank">
+                                        <div class="product-image-flipper">
+                                            <img src="./assets/images/t-shirts/front-8.jpeg"
+                                                alt="Front of Sleeveless Top" class="product-image front-image">
+                                            <img src="./assets/images/t-shirts/back-8.jpeg" alt="Back of Sleeveless Top"
+                                                class="product-image back-image">
+                                        </div>
+                                    </a>
+                                    <!-- <div class="product-badge badge-new"></div> -->
+                                    <div class="product-actions">
+                                        <button class="action-btn" aria-label="Add to cart"><i
+                                                class="fas fa-shopping-cart"></i></button>
+                                        <button class="action-btn" aria-label="Add to wishlist"><i
+                                                class="fas fa-heart"></i></button>
+                                        <button class="action-btn" aria-label="Compare"><i
+                                                class="fas fa-exchange-alt"></i></button>
+                                        <button class="action-btn" aria-label="Quick view"><i
+                                                class="fas fa-eye"></i></button>
+                                    </div>
+                                    <div class="product-sizes">
+                                        <button class="size-option">S</button>
+                                        <button class="size-option active">M</button>
+                                        <button class="size-option">L</button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <a href="polo-tee.html" target="_blank">
+                                        <h3 class="product-title">Athletic performance t-shirt</h3>
+                                    </a>
+                                    <p class="product-price"><span class="original-price">$49.99</span> $34.99</p>
+                                    <div class="product-color-swatches">
+                                        <span class="color-swatch active" style="background-color: #ffe0e0;"></span>
+                                        <span class="color-swatch" style="background-color: #c8d4ff;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image-wrapper">
+                                    <a href="crew-neck-plane.html" target="_blank">
+                                        <div class="product-image-flipper">
+                                            <img src="./assets/images/t-shirts/fornt-1.jpeg"
+                                                alt="Front of Summer Two Piece Set" class="product-image front-image">
+                                            <img src="./assets/images/t-shirts/back-1.jpeg"
+                                                alt="Back of Summer Two Piece Set" class="product-image back-image">
+                                        </div>
+                                    </a>
+                                    <div class="product-badge badge-hot">Hot</div>
+                                    <!-- Hover UI -->
+                                    <div class="product-actions">
+                                        <button class="action-btn" aria-label="Add to cart"><i
+                                                class="fas fa-shopping-cart"></i></button>
+                                        <button class="action-btn" aria-label="Add to wishlist"><i
+                                                class="fas fa-heart"></i></button>
+                                        <button class="action-btn" aria-label="Compare"><i
+                                                class="fas fa-exchange-alt"></i></button>
+                                        <button class="action-btn" aria-label="Quick view"><i
+                                                class="fas fa-eye"></i></button>
+                                    </div>
+                                    <div class="product-sizes">
+                                        <button class="size-option">XS</button>
+                                        <button class="size-option active">S</button>
+                                        <button class="size-option">M</button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <a href="crew-neck-plane.html" target="_blank">
+                                        <h3 class="product-title">Crew neck plain</h3>
+                                    </a>
+                                    <p class="product-price"><span class="original-price">$99.99</span> $69.99</p>
+                                    <div class="product-color-swatches">
+                                        <span class="color-swatch active" style="background-color: #d3bca9;"></span>
+                                        <span class="color-swatch" style="background-color: #a8c1d7;"></span>
+                                        <span class="color-swatch" style="background-color: #e8955f;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="no-results-message">No products found matching your criteria.</p>
+                        </div>
+                        <nav class="pagination" id="pagination"></nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="auto-scroll-section">
+            <div class="section-header">
+                <h2 class="animated-heading">
+                    <span class="static-text">Trending </span>
+                    <span class="js-typewriter" data-text="T-Shirt Deals"></span>
+                </h2>
+                <p class="tagline">Don't miss out on these limited-time offers</p>
+                <div class="animated-underline"></div>
+            </div>
+            <div class="auto-scroll-wrapper" id="scroll-wrapper">
+                <div class="scroll-track" id="scroll-track">
+                    <!-- Original Offer Cards -->
+                    <a href="#offer1" class="offer-card"
+                        style="background-image: url('./assets/images/t-shirts/fornt-1.jpeg');">
+                        <div class="badge">OFFER</div>
+                        <i class="fas fa-tshirt"></i>
+                        <h3>Plain Modal Tee Flat 40% OFF</h3>
+                        <span>Premium Comfort Cotton</span>
+                    </a>
+                    <a href="#offer2" class="offer-card"
+                        style="background-image: url('./assets/images/t-shirts/front-2.jpeg');">
+                        <div class="badge">OFFER</div>
+                        <i class="fas fa-bolt"></i>
+                        <h3>Oversized Fit 50% OFF Today</h3>
+                        <span>Urban Streetwear Drop</span>
+                    </a>
+                    <a href="#offer3" class="offer-card"
+                        style="background-image: url('./assets/images/t-shirts/front-3.jpeg');">
+                        <div class="badge">OFFER</div>
+                        <i class="fas fa-fire"></i>
+                        <h3>Hot Pick Combo Buy 1 Get 1</h3>
+                        <span>Mix & Match Styles</span>
+                    </a>
+                    <a href="#offer4" class="offer-card"
+                        style="background-image: url('./assets/images/t-shirts/front-4.jpeg');">
+                        <div class="badge">OFFER</div>
+                        <i class="fas fa-tags"></i>
+                        <h3> Graphic Tees Starting ₹399</h3>
+                        <span>New Prints Just Dropped</span>
+                    </a>
+                    <a href="#offer5" class="offer-card"
+                        style="background-image: url('./assets/images/t-shirts/front-5.jpeg');">
+                        <div class="badge">OFFER</div>
+                        <i class="fas fa-star"></i>
+                        <h3>Premium Modal Tee ₹499 Only</h3>
+                        <span>Soft Stretch Fit</span>
+                    </a>
+                    <a href="#offer6" class="offer-card"
+                        style="background-image: url('./assets/images/t-shirts/front-6.jpeg');">
+                        <div class="badge">OFFER</div>
+                        <i class="fas fa-rocket"></i>
+                        <h3>Launch Offer 30% OFF</h3>
+                        <span>Limited Edition Modal Wear</span>
+                    </a>
+                    <a href="#offer7" class="offer-card"
+                        style="background-image: url('./assets/images/t-shirts/front-7.jpeg');">
+                        <div class="badge">OFFER</div>
+                        <i class="fas fa-gift"></i>
+                        <h3>Flat ₹600 OFF on 3+ Tees</h3>
+                        <span>Bundle & Save Big</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+    </main>
+
+    <!-- === NEW FINAL FOOTER === -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1 & 5 -->
+                <div class="footer-column">
+                    <h4 class="footer-title">Collection</h4>
+                    <ul class="footer-list">
+                        <li><a href="#" class="footer-link">T shirt</a></li>
+                        <li><a href="#" class="footer-link">Sweat wear</a></li>
+                        <li><a href="#" class="footer-link">Dresses</a></li>
+                        <li><a href="#" class="footer-link">Skirt & shorts</a></li>
+                    </ul>
+                </div>
+                <!-- Column 2 & 6 -->
+                <div class="footer-column">
+                    <h4 class="footer-title">Information</h4>
+                    <ul class="footer-list">
+                        <li><a href="#" class="footer-link">About us</a></li>
+                        <li><a href="#" class="footer-link">Careers</a></li>
+                        <li><a href="#" class="footer-link">Blogs</a></li>
+                        <li><a href="#" class="footer-link">Contact us</a></li>
+                        <li><a href="#" class="footer-link">Testimonial</a></li>
+
+                    </ul>
+                </div>
+                <!-- Column 3 & 7 -->
+                <div class="footer-column">
+                    <h4 class="footer-title">Contact us</h4>
+                    <ul class="footer-list">
+                        <li><span class="footer-text">+91 980 971-24-19</span></li>
+                        <li><a href="mailto:Demo@gmail.com" class="footer-link">chhap@gmail.com</a></li>
+                        <li><span class="footer-text">1901 Yousufguda metro, hyderabad 500045</span></li>
+                        <li><span class="footer-text">10am to 6pm Everyday</span></li>
+                    </ul>
+                </div>
+                <!-- Column 4 & 8 -->
+                <div class="footer-column">
+                    <h4 class="footer-title">Follow us :</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <h4 class="footer-title" style="margin-top: 40px;">Payment accepted:</h4>
+                    <div class="payment-icons">
+                        <a href="" class="payment-icon">
+                            <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img" width="48"
+                                height="24" aria-labelledby="pi-visa">
+                                <title id="pi-visa">Visa</title>
+                                <path opacity=".07"
+                                    d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z">
+                                </path>
+                                <path fill="#fff"
+                                    d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32">
+                                </path>
+                                <path
+                                    d="M28.3 10.1H28c-.4 1-.7 1.5-1 3h1.9c-.3-1.5-.3-2.2-.6-3zm2.9 5.9h-1.7c-.1 0-.1 0-.2-.1l-.2-.9-.1-.2h-2.4c-.1 0-.2 0-.2.2l-.3.9c0 .1-.1.1-.1.1h-2.1l.2-.5L27 8.7c0-.5.3-.7.8-.7h1.5c.1 0 .2 0 .2.2l1.4 6.5c.1.4.2.7.2 1.1.1.1.1.1.1.2zm-13.4-.3l.4-1.8c.1 0 .2.1.2.1.7.3 1.4.5 2.1.4.2 0 .5-.1.7-.2.5-.2.5-.7.1-1.1-.2-.2-.5-.3-.8-.5-.4-.2-.8-.4-1.1-.7-1.2-1-.8-2.4-.1-3.1.6-.4.9-.8 1.7-.8 1.2 0 2.5 0 3.1.2h.1c-.1.6-.2 1.1-.4 1.7-.5-.2-1-.4-1.5-.4-.3 0-.6 0-.9.1-.2 0-.3.1-.4.2-.2.2-.2.5 0 .7l.5.4c.4.2.8.4 1.1.6.5.3 1 .8 1.1 1.4.2.9-.1 1.7-.9 2.3-.5.4-.7.6-1.4.6-1.4 0-2.5.1-3.4-.2-.1.2-.1.2-.2.1zm-3.5.3c.1-.7.1-.7.2-1 .5-2.2 1-4.5 1.4-6.7.1-.2.1-.3.3-.3H18c-.2 1.2-.4 2.1-.7 3.2-.3 1.5-.6 3-1 4.5 0 .2-.1.2-.3.2M5 8.2c0-.1.2-.2.3-.2h3.4c.5 0 .9.3 1 .8l.9 4.4c0 .1 0 .1.1.2 0-.1.1-.1.1-.1l2.1-5.1c-.1-.1 0-.2.1-.2h2.1c0 .1 0 .1-.1.2l-3.1 7.3c-.1.2-.1.3-.2.4-.1.1-.3 0-.5 0H9.7c-.1 0-.2 0-.2-.2L7.9 9.5c-.2-.2-.5-.5-.9-.6-.6-.3-1.7-.5-1.9-.5L5 8.2z"
+                                    fill="#142688"></path>
+                            </svg>
+
+                            <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img" width="48"
+                                height="24" aria-labelledby="pi-master">
+                                <title id="pi-master">Mastercard</title>
+                                <path opacity=".07"
+                                    d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z">
+                                </path>
+                                <path fill="#fff"
+                                    d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32">
+                                </path>
+                                <circle fill="#EB001B" cx="15" cy="12" r="7"></circle>
+                                <circle fill="#F79E1B" cx="23" cy="12" r="7"></circle>
+                                <path fill="#FF5F00"
+                                    d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z">
+                                </path>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="pi-american_express"
+                                viewBox="0 0 38 24" width="48" height="24">
+                                <title id="pi-american_express">American Express</title>
+                                <path fill="#000"
+                                    d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3Z"
+                                    opacity=".07"></path>
+                                <path fill="#006FCF"
+                                    d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32Z">
+                                </path>
+                                <path fill="#FFF"
+                                    d="M22.012 19.936v-8.421L37 11.528v2.326l-1.732 1.852L37 17.573v2.375h-2.766l-1.47-1.622-1.46 1.628-9.292-.02Z">
+                                </path>
+                                <path fill="#006FCF"
+                                    d="M23.013 19.012v-6.57h5.572v1.513h-3.768v1.028h3.678v1.488h-3.678v1.01h3.768v1.531h-5.572Z">
+                                </path>
+                                <path fill="#006FCF"
+                                    d="m28.557 19.012 3.083-3.289-3.083-3.282h2.386l1.884 2.083 1.89-2.082H37v.051l-3.017 3.23L37 18.92v.093h-2.307l-1.917-2.103-1.898 2.104h-2.321Z">
+                                </path>
+                                <path fill="#FFF"
+                                    d="M22.71 4.04h3.614l1.269 2.881V4.04h4.46l.77 2.159.771-2.159H37v8.421H19l3.71-8.421Z">
+                                </path>
+                                <path fill="#006FCF"
+                                    d="m23.395 4.955-2.916 6.566h2l.55-1.315h2.98l.55 1.315h2.05l-2.904-6.566h-2.31Zm.25 3.777.875-2.09.873 2.09h-1.748Z">
+                                </path>
+                                <path fill="#006FCF"
+                                    d="M28.581 11.52V4.953l2.811.01L32.84 9l1.456-4.046H37v6.565l-1.74.016v-4.51l-1.644 4.494h-1.59L30.35 7.01v4.51h-1.768Z">
+                                </path>
+                            </svg>
+
+
+                            <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="48" height="24"
+                                role="img" aria-labelledby="pi-paypal">
+                                <title id="pi-paypal">PayPal</title>
+                                <path opacity=".07"
+                                    d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z">
+                                </path>
+                                <path fill="#fff"
+                                    d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32">
+                                </path>
+                                <path fill="#003087"
+                                    d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z">
+                                </path>
+                                <path fill="#3086C8"
+                                    d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z">
+                                </path>
+                                <path fill="#012169"
+                                    d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z">
+                                </path>
+                            </svg>
+
+                            <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img" width="48"
+                                height="24" aria-labelledby="pi-diners_club">
+                                <title id="pi-diners_club">Diners Club</title>
+                                <path opacity=".07"
+                                    d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z">
+                                </path>
+                                <path fill="#fff"
+                                    d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32">
+                                </path>
+                                <path
+                                    d="M12 12v3.7c0 .3-.2.3-.5.2-1.9-.8-3-3.3-2.3-5.4.4-1.1 1.2-2 2.3-2.4.4-.2.5-.1.5.2V12zm2 0V8.3c0-.3 0-.3.3-.2 2.1.8 3.2 3.3 2.4 5.4-.4 1.1-1.2 2-2.3 2.4-.4.2-.4.1-.4-.2V12zm7.2-7H13c3.8 0 6.8 3.1 6.8 7s-3 7-6.8 7h8.2c3.8 0 6.8-3.1 6.8-7s-3-7-6.8-7z"
+                                    fill="#3086C8"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <!-- <div class="footer-logo">CHHAP</div> -->
+                <div class="copyright-text">Copyright © 2025 design <span class="footer-logo"> chhap </span></div>
+                <ul class="footer-bottom-list">
+                    <li><a href="#" class="footer-link">Term & condition</a></li>
+                    <li><a href="#" class="footer-link">Privacy policy</a></li>
+                    <li><a href="#" class="footer-link">Refund policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- THEME CUSTOMIZER (Unchanged) -->
+    <div class="theme-customizer">
+        <button id="customizerToggle" class="customizer-toggle" aria-label="Theme Settings"><i
+                class="fas fa-cog"></i></button>
+        <div id="customizerPanel" class="customizer-panel">
+            <h4>Customize Theme</h4>
+            <div class="setting-item">
+                <label>Dark Mode</label>
+                <label class="switch">
+                    <input type="checkbox" id="themeToggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="setting-item">
+                <label>Accent Color</label>
+                <div id="colorSwatches" class="color-swatches">
+                    <button class="swatch" style="background-color: #5E35B1;" data-color="#5E35B1"></button>
+                    <button class="swatch" style="background-color: #007BFF;" data-color="#007BFF"></button>
+                    <button class="swatch" style="background-color: #17A2B8;" data-color="#17A2B8"></button>
+                    <button class="swatch" style="background-color: #28A745;" data-color="#28A745"></button>
+                    <button class="swatch" style="background-color: #DC3545;" data-color="#DC3545"></button>
+                    <button class="swatch" style="background-color: #FFC107;" data-color="#FFC107"></button>
+                    <button class="swatch" style="background-color: #E91E63;" data-color="#E91E63"></button>
+                    <button class="swatch" style="background-color: #3F51B5;" data-color="#3F51B5"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- === OFF-CANVAS CART === -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-offcanvas" id="cart-offcanvas">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="cart-close-btn" id="cart-close-btn">&times;</button>
+        </div>
+        <div class="cart-body">
+            <!-- Cart Item 1 -->
+            <div class="cart-item">
+                <img src="./assets/images/t-shirts/t-shirt-1.png" alt="White T-shirt" class="cart-item-image">
+                <div class="cart-item-details">
+                    <h4 class="cart-item-name">Minimalist Style Tee</h4>
+                    <p class="cart-item-price">₹670.00</p>
+                    <div class="cart-item-quantity">
+                        <button>-</button>
+                        <input type="number" value="1" min="1">
+                        <button>+</button>
+                    </div>
+                </div>
+                <button class="cart-item-remove">&times;</button>
+            </div>
+            <!-- Cart Item 2 -->
+            <div class="cart-item">
+                <img src="./assets/images/t-shirts/t-shirt-2.png" alt="Black Hoodie" class="cart-item-image">
+                <div class="cart-item-details">
+                    <h4 class="cart-item-name">Urban Explorer Hoodie</h4>
+                    <p class="cart-item-price">₹812.00</p>
+                    <div class="cart-item-quantity">
+                        <button>-</button>
+                        <input type="number" value="1" min="1">
+                        <button>+</button>
+                    </div>
+                </div>
+                <button class="cart-item-remove">&times;</button>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-subtotal">
+                <span>Subtotal</span>
+                <span>₹1482.00</span>
+            </div>
+            <div class="flex-buttons">
+                <button class="btn-viewcart">View Cart</button>
+                <button class="btn-checkout">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./assets/js/script.js"></script>
+    <!-- Swiper.js JS for carousel -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- GSAP JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+</body>
+
+</html>
